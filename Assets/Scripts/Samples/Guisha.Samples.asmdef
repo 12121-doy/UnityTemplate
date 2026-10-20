@@ -1,0 +1,12 @@
+{
+  "name": "Guisha.Samples",
+  "rootNamespace": "Guisha.Samples",
+  "references": [
+    "Guisha.Core",
+    "Guisha.Framework",
+    "Guisha.Gameplay",
+    "Guisha.UI",
+    "Unity.ugui"
+  ],
+  "autoReferenced": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Guisha.Editor",
+  "rootNamespace": "Guisha.Editor",
+  "references": [
+    "Guisha.Core",
+    "Guisha.Framework",
+    "Guisha.Gameplay",
+    "Guisha.UI",
+    "Guisha.Samples",
+    "Unity.Addressables",
+    "Unity.Addressables.Editor",
+    "Unity.ResourceManager",
+    "Unity.ugui"
+  ],
+  "autoReferenced": true,
+  "includePlatforms": [
+    "Editor"
+  ]
+}
