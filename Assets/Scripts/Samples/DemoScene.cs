@@ -1,3 +1,4 @@
+using Guisha.Rendering; // 使用与实际活动管线一致的材质、灯光和相机适配入口。
 using System.Collections.Generic; // 引入 System.Collections.Generic 命名空间，使用其中的类型与 API。
 using Guisha.Core; // 引入 Guisha.Core 命名空间，使用其中的类型与 API。
 using Guisha.Framework; // 引入 Guisha.Framework 命名空间，使用其中的类型与 API。
@@ -171,6 +172,10 @@ namespace Guisha.Samples // 将本文件类型归入 Guisha.Samples，避免类�
             npc.SetActive(true); // 将 npc 的激活状态设为 true，同时影响其组件生命周期。
             AddPortal(new Vector3(8, 1.5f, -4), dungeon == 0 ? 1 : 0); // 构建一个配置到指定演示场景的血门对象。
             AddPortal(new Vector3(-8, 1.5f, -4), dungeon == 2 ? 0 : 2); // 构建一个配置到指定演示场景的血门对象。
+            var rendering = content.gameObject.AddComponent<PipelineSceneSetup>(); // 模板内容自行持有光照和曝光配置，附加场景切换时随内容停用。
+            rendering.templateCamera = camera; // 绑定模板运行时创建的主相机。
+            rendering.templateSun = light; // 绑定模板自己的方向光，避免改写美术场景灯光。
+            RenderPipelineService.PrepareHierarchy(content.gameObject); // 同步准备玩家外观、NPC、交互物和相机。
             gate.Refresh(); // 按当前活动场景立即重算全部已注册内容根。
         } // 结束方法。
 
@@ -215,11 +220,7 @@ namespace Guisha.Samples // 将本文件类型归入 Guisha.Samples，避免类�
             go.transform.SetParent(content); // 设置 Transform 父节点，将对象归到所属场景或实体层级。
             go.transform.position = position; // 更新 go.transform.position，使用 世界位置。
             go.transform.localScale = scale; // 更新 go.transform.localScale，使用 物体缩放。
-            var shader = Shader.Find("Universal Render Pipeline/Lit"); // 把 Shader.Find 的返回值 保存为 shader。
-            if (shader == null) // 当shader为空时，执行下方分支。
-                shader = Shader.Find("Standard"); // 更新 shader，使用 Shader.Find 的返回值。
-            var material = new Material(shader); // 创建 Material，保存为 material。
-            material.color = color; // 更新 material.color，使用 显示颜色。
+            var material = RenderPipelineService.CreateMaterial(color); // 按真实活动管线创建材质，不能因安装了某个包就选错 Shader。
             materials.Add(material); // 向 本演示创建且需要销毁的材质 加入 material。
             go.GetComponent<Renderer>().sharedMaterial = material; // 更新 go.GetComponent<Renderer>().sharedMaterial，使用 material。
             return go; // 返回 go。

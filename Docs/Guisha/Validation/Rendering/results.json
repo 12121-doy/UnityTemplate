@@ -1,0 +1,56 @@
+[
+  {
+    "pipeline": "BuiltIn",
+    "phase": "EditMode",
+    "total": "52",
+    "passed": "52",
+    "failed": "0",
+    "skipped": "0",
+    "result": "Passed"
+  },
+  {
+    "pipeline": "BuiltIn",
+    "phase": "PlayMode",
+    "total": "5",
+    "passed": "5",
+    "failed": "0",
+    "skipped": "0",
+    "result": "Passed"
+  },
+  {
+    "pipeline": "Universal",
+    "phase": "EditMode",
+    "total": "52",
+    "passed": "52",
+    "failed": "0",
+    "skipped": "0",
+    "result": "Passed"
+  },
+  {
+    "pipeline": "Universal",
+    "phase": "PlayMode",
+    "total": "5",
+    "passed": "5",
+    "failed": "0",
+    "skipped": "0",
+    "result": "Passed"
+  },
+  {
+    "pipeline": "HighDefinition",
+    "phase": "EditMode",
+    "total": "52",
+    "passed": "52",
+    "failed": "0",
+    "skipped": "0",
+    "result": "Passed"
+  },
+  {
+    "pipeline": "HighDefinition",
+    "phase": "PlayMode",
+    "total": "5",
+    "passed": "5",
+    "failed": "0",
+    "skipped": "0",
+    "result": "Passed"
+  }
+]

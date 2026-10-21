@@ -10,7 +10,8 @@
     "Unity.Addressables",
     "Unity.Addressables.Editor",
     "Unity.ResourceManager",
-    "Unity.ugui"
+    "Unity.ugui",
+    "Guisha.Rendering"
   ],
   "autoReferenced": true,
   "includePlatforms": [

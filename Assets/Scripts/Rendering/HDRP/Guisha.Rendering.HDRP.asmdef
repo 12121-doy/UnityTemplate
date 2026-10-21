@@ -1,0 +1,21 @@
+{
+  "name": "Guisha.Rendering.HDRP",
+  "rootNamespace": "Guisha.Rendering",
+  "references": [
+    "Guisha.Rendering",
+    "Guisha.Framework",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.RenderPipelines.HighDefinition.Runtime"
+  ],
+  "autoReferenced": true,
+  "defineConstraints": [
+    "GUISHA_HDRP"
+  ],
+  "versionDefines": [
+    {
+      "name": "com.unity.render-pipelines.high-definition",
+      "expression": "[14.0.0,15.0.0)",
+      "define": "GUISHA_HDRP"
+    }
+  ]
+}

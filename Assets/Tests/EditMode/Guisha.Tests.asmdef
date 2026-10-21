@@ -2,7 +2,8 @@
   "name": "Guisha.Tests",
   "references": [
     "Guisha.Core",
-    "Guisha.Framework"
+    "Guisha.Framework",
+    "Guisha.Rendering"
   ],
   "includePlatforms": [
     "Editor"

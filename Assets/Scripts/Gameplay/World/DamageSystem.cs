@@ -1,3 +1,4 @@
+using Guisha.Rendering; // 对象池借出的受击特效也经过当前管线的标准材质适配。
 using Guisha.Core; // 引入 Guisha.Core 命名空间，使用其中的类型与 API。
 using Guisha.Framework; // 引入 Guisha.Framework 命名空间，使用其中的类型与 API。
 using UnityEngine; // 引入 UnityEngine 命名空间，使用其中的类型与 API。
@@ -36,7 +37,7 @@ namespace Guisha.Gameplay // 将本文件类型归入 Guisha.Gameplay，避免�
         private void Awake() // 配置受击特效存在时创建对象池，绑定激活/隐藏/销毁回调。
         { // 开始方法。
             if (hitEffectPrefab != null) // 当受击特效预制体不为空时，执行下方分支。
-                pool = new ObjectPool<GameObject>(() => Instantiate(hitEffectPrefab, transform), x => x.SetActive(true), x => x.SetActive(false), x => Destroy(x), 16); // 更新 可复用对象池，使用 新建的 ObjectPool<GameObject> 对象。
+                pool = new ObjectPool<GameObject>(() => Instantiate(hitEffectPrefab, transform), x => { RenderPipelineService.PrepareHierarchy(x); x.SetActive(true); }, x => x.SetActive(false), x => Destroy(x), 16); // 借出前适配特效材质再激活，归还时隐藏，池销毁时统一释放实例。
         } // 结束方法。
 
         /// <summary>

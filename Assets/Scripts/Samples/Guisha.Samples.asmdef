@@ -6,7 +6,8 @@
     "Guisha.Framework",
     "Guisha.Gameplay",
     "Guisha.UI",
-    "Unity.ugui"
+    "Unity.ugui",
+    "Guisha.Rendering"
   ],
   "autoReferenced": true
 }

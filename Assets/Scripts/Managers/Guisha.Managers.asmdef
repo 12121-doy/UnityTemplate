@@ -5,7 +5,8 @@
     "Guisha.Core",
     "Guisha.Framework",
     "Unity.Addressables",
-    "Unity.ResourceManager"
+    "Unity.ResourceManager",
+    "Guisha.Rendering"
   ],
   "autoReferenced": true
 }

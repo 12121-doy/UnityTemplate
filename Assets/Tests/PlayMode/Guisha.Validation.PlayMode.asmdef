@@ -1,7 +1,19 @@
 {
   "name": "Guisha.Validation.PlayMode",
-  "references": ["Guisha.Core", "Guisha.Framework", "Guisha.Gameplay", "Guisha.Managers", "Guisha.UI", "Unity.ugui"],
-  "optionalUnityReferences": ["TestAssemblies"],
-  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "references": [
+    "Guisha.Core",
+    "Guisha.Framework",
+    "Guisha.Gameplay",
+    "Guisha.Managers",
+    "Guisha.UI",
+    "Unity.ugui",
+    "Guisha.Rendering"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
   "autoReferenced": false
 }

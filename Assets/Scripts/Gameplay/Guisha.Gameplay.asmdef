@@ -3,7 +3,8 @@
   "rootNamespace": "Guisha.Gameplay",
   "references": [
     "Guisha.Core",
-    "Guisha.Framework"
+    "Guisha.Framework",
+    "Guisha.Rendering"
   ],
   "autoReferenced": true
 }

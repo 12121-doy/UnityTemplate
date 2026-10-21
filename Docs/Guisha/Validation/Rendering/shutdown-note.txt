@@ -1,0 +1,1 @@
+Unity 的 NUnit 测试完成并写出 Passed XML。最后一次内置管线 PlayMode 的编辑器进程在输出 Input System Shutdown 后停滞，已在确认测试结果保存后结束该隔离进程。URP/HDRP 最终测试进程正常退出。此记录与 NUnit 测试结果分别保存。

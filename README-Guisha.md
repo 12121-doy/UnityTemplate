@@ -4,6 +4,8 @@
 
 Unity 2022.3.62f3c1，Addressables 1.22.3，uGUI 与 Unity Test Framework 已就绪。当前输入模式为 Input Manager (Old)，可直接使用示例按键。
 
+内置、URP、HDRP 已接入统一渲染适配。使用 `Guisha > Rendering > Use Built-in / Use URP / Use HDRP` 切换，详见 [渲染管线适配](Docs/Guisha/渲染管线适配.md)。SRP 验证版本为 14.0.12，未安装的可选包不会成为内置管线的编译依赖。
+
 ## 打开演示
 
 Unity 中打开 **Assets/GuishaDemo/Scenes/Guisha.unity**，按 Play。场景与 Addressables 资源已生成，无需再次点击 Create Greybox Demo。
@@ -21,8 +23,8 @@ Unity 中打开 **Assets/GuishaDemo/Scenes/Guisha.unity**，按 Play。场景与
 
 在该工程的隔离副本中，使用真实 Unity 编辑器运行：
 
-- EditMode 核心与设计模式测试 **44/44 通过**。
-- PlayMode 集成与回归测试 **3/3 通过**，覆盖玩家/HUD 初始化、背包和 San 状态恢复、UI 输入锁、附加场景切换、Addressables 鬼怪生成、NavMesh 绑定、返回主场景与唯一活动玩家/AudioListener，以及玩法与动画集成。
+- 内置、URP、HDRP 分别通过 **52/52 EditMode、5/5 PlayMode**。
+- 覆盖玩家/HUD 初始化、背包和 San 状态恢复、UI 输入锁、附加场景切换、Addressables 鬼怪生成、NavMesh 绑定、返回主场景与唯一活动玩家/AudioListener、玩法与动画，以及材质复用释放和主相机渲染检查。
 
 验证后将 Unity 生成的场景、资源、GUID、Addressables 设置和同一份测试同步到原项目；保留原来打开的场景和依赖版本。未执行正式 Player 构建，也未人工验收画面、手动输入或真实音频素材。
 
@@ -32,7 +34,7 @@ Unity 中打开 **Assets/GuishaDemo/Scenes/Guisha.unity**，按 Play。场景与
 
 ## 设计模式与动画扩展
 
-已补齐 23 种 GoF 模式、MonoBehaviour 单例、动画模块及四种玩法模式。按 M 选择玩法；详见 Docs/Guisha/设计模式与动画.md。最新验证：44 项 EditMode、3 项 PlayMode 通过。
+已补齐 23 种 GoF 模式、MonoBehaviour 单例、动画模块及四种玩法模式。按 M 选择玩法；详见 Docs/Guisha/设计模式与动画.md。最新测试记录参见渲染管线适配文档。
 
 ## 方法与继承调用手册
 

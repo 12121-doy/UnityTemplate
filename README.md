@@ -2,6 +2,8 @@
 
 Unity + C# 恐怖游戏框架，包含底层工具、实体/FSM/交互抽象、全局管理器、玩家与鬼怪 AI、叙事、UI、动画，以及 23 种 GoF 设计模式。
 
+支持 **内置、URP、HDRP**，通过 `Guisha > Rendering` 菜单选择。已在 Unity 2022.3.62f3c1、URP/HDRP 14.0.12 分别验证；业务代码共用，材质、相机、模板方向光和 HDRP 曝光由可选适配器处理。
+
 ## 快速开始
 
 1. 使用 **Unity 2022.3.62f3c1** 打开工程，等待依赖导入（Addressables 1.22.3、uGUI、Test Framework 1.1.33）。
@@ -12,7 +14,8 @@ Unity + C# 恐怖游戏框架，包含底层工具、实体/FSM/交互抽象、�
 
 ## 文档
 
-- [逐行中文注释说明](Docs/Guisha/逐行注释说明.md)：89 个脚本、523 个方法、6,525 行有效代码已补齐中文说明，可在 IDE 悬停查看方法文档。
+- [渲染管线适配](Docs/Guisha/渲染管线适配.md)：三种管线切换、API 调用、配置、材质范围与真实测试结果。
+- [逐行中文注释说明](Docs/Guisha/逐行注释说明.md)：101 个脚本已有中文说明，可在 IDE 悬停查看方法文档。
 - [方法与继承调用手册 PDF](Docs/Guisha/Unity框架_方法与继承调用手册.pdf)：147 页，完整收录 219 个类型、523 个显式方法/构造/局部函数声明，包含继承模板、参数与返回类型、源码位置、可点击调用关系及测试附录。
 - [接入与扩展](Docs/Guisha/接入与扩展.md)
 - [设计模式与动画](Docs/Guisha/设计模式与动画.md)
@@ -31,7 +34,8 @@ PDF 包含 **465 个业务方法声明 + 58 个测试方法声明**，不含 Uni
 | --- | --- |
 | `Assets/Scripts/Core` | MonoSingleton、PureSingleton、EventBus、对象池、异步、日志、数学、序列化、设计模式 |
 | `Assets/Scripts/Framework` | 实体、工厂、FSM、契约、配置、事件、资源拥有权、玩法规则、动画适配器 |
-| `Assets/Scripts/Managers` | Game、Audio、UI、Resource、SceneFlow、GameMode 与显式启动器 |
+| `Assets/Scripts/Rendering` | 管线识别、材质拥有权、模板场景设置及 URP/HDRP 可选适配器 |
+| `Assets/Scripts/Managers` | Game、Audio、UI、Resource、SceneFlow、GameMode、Rendering 与显式启动器 |
 | `Assets/Scripts/Gameplay` | 玩家、背包、实体、AI、动画驱动组件、剧情、世界交互与生存生成 |
 | `Assets/Scripts/UI` | 面板基类、HUD、对话、背包、菜单、玩法面板与输入路由 |
 | `Assets/Scripts/Samples` | 灰盒场景组合与设计模式调用示例 |
@@ -42,6 +46,6 @@ PDF 包含 **465 个业务方法声明 + 58 个测试方法声明**，不含 Uni
 
 ## 验证与打包
 
-真实 Unity 编辑器在隔离副本中通过 **44 项 EditMode + 3 项 PlayMode**。文档索引基于当前 89 个 C# 文件提取，Roslyn 语义解析错误为 0。可在 Test Runner 复跑测试；PlayMode 测试会切换场景，运行前保存编辑。
+三条管线分别在真实 Unity 编辑器的隔离副本中通过 **52 项 EditMode + 5 项 PlayMode**，包含玩法与动画回归、Addressables 实体生成、材质生命周期和主相机像素检查。结果与截图保存在 [Validation/Rendering](Docs/Guisha/Validation/Rendering)。可在 Test Runner 复跑测试；PlayMode 测试会切换场景，运行前保存编辑。
 
 正式打包前，先在 Addressables Groups 执行 **Build → New Build → Default Build Script**，再构建 Player。当前尚未执行正式 Player 构建，示例动画和灰盒资源需按正式美术资产替换。

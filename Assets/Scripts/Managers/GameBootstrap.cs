@@ -22,6 +22,7 @@ namespace Guisha.Managers // 将本文件类型归入 Guisha.Managers，避免�
                 Guisha.Core.Logger.WriteFile = settings.writeLogFile; // 更新 Guisha.Core.Logger.WriteFile，使用 settings.writeLogFile。
             } // 结束条件分支。
 
+            Ensure<RenderingManager>(); // 建立渲染适配入口；在场景加载与实体生成时处理当前活动管线。
             Ensure<ResourceManager>(); // 当前类型实例不存在时新建独立根对象并 AddComponent。
             Ensure<AudioManager>(); // 当前类型实例不存在时新建独立根对象并 AddComponent。
             Ensure<UIManager>(); // 当前类型实例不存在时新建独立根对象并 AddComponent。
@@ -37,7 +38,7 @@ namespace Guisha.Managers // 将本文件类型归入 Guisha.Managers，避免�
         private static void Ensure<T>() // 当前类型实例不存在时新建独立根对象并 AddComponent。
             where T : MonoSingleton<T> // 限定泛型类型必须满足此处的继承、接口或构造约束。
         { // 开始方法。
-            if (!MonoSingleton<T>.Exists) // 当!MonoSingleton小于T>.Exists时，执行下方分支。
+            if (!MonoSingleton<T>.Exists) // 当前类型没有主实例时，显式创建独立根对象。
                 new GameObject(typeof(T).Name).AddComponent<T>(); // 给 new GameObject(typeof(T).Name) 添加 T 组件。
         } // 结束方法。
     } // 结束类型。

@@ -1,3 +1,4 @@
+using Guisha.Rendering; // 过场相机启用前补齐当前管线要求的附加相机数据。
 using Guisha.Core; // 引入 Guisha.Core 命名空间，使用其中的类型与 API。
 using Guisha.Framework; // 引入 Guisha.Framework 命名空间，使用其中的类型与 API。
 using UnityEngine; // 引入 UnityEngine 命名空间，使用其中的类型与 API。
@@ -71,7 +72,10 @@ namespace Guisha.Gameplay // 将本文件类型归入 Guisha.Gameplay，避免�
             playing = true; // 更新 当前是否播放过场，使用 true（启用/满足）。
             EventBus.Publish(new InputLockChanged(this, true)); // 广播 InputLockChanged 事件，按拥有者增删输入锁。
             if (cutsceneCamera != null) // 当过场镜头对象不为空时，执行下方分支。
-                cutsceneCamera.SetActive(true); // 将 过场镜头对象 的激活状态设为 true，同时影响其组件生命周期。
+            { // 先准备相机，再启用镜头，避免首帧缺少管线配置。
+                RenderPipelineService.PrepareHierarchy(cutsceneCamera); // 原有相机与 Volume 美术参数保持由场景配置。
+                cutsceneCamera.SetActive(true); // 启用已经准备好的过场相机。
+            } // 完成过场镜头启用。
             director.Play(); // 开始播放配置的 Timeline/过场资产。
         } // 结束方法。
 
