@@ -56,4 +56,6 @@ PDF 包含 **465 个业务方法声明 + 58 个测试方法声明**，不含 Uni
 
 三条管线分别在真实 Unity 编辑器的隔离副本中通过 **52 项 EditMode + 5 项 PlayMode**，包含玩法与动画回归、Addressables 实体生成、材质生命周期和主相机像素检查。结果与截图保存在 [Validation/Rendering](Docs/Guisha/Validation/Rendering)。可在 Test Runner 复跑测试；PlayMode 测试会切换场景，运行前保存编辑。
 
+UPM 1.0.1 另在空消费项目中通过 Git 实际安装，从零生成示例后通过 **53 项 EditMode + 5 项 PlayMode**；新增测试检查动画参数重新导入后的持久化，详见 [UPM 验证记录](Docs/Guisha/Validation/UPM)。
+
 正式打包前，先在 Addressables Groups 执行 **Build → New Build → Default Build Script**，再构建 Player。当前尚未执行正式 Player 构建，示例动画和灰盒资源需按正式美术资产替换。

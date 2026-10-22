@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-22 09:39:54Z" end-time="2026-10-22 09:39:56Z" duration="1.3822947">
+  <test-suite type="TestSuite" id="1000" name="UPM-ConsumerCheck" fullname="UPM-ConsumerCheck" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-22 09:39:54Z" end-time="2026-10-22 09:39:56Z" duration="1.382295" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1009" name="Guisha.Validation.PlayMode.dll" fullname="C:/Users/Administrator/Documents/Codex/2026-10-20/b/work/UPM-ConsumerCheck/Library/ScriptAssemblies/Guisha.Validation.PlayMode.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-22 09:39:54Z" end-time="2026-10-22 09:39:56Z" duration="1.377743" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="39616" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1010" name="Guisha" fullname="Guisha" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-22 09:39:54Z" end-time="2026-10-22 09:39:56Z" duration="1.377417" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1011" name="Validation" fullname="Guisha.Validation" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-22 09:39:54Z" end-time="2026-10-22 09:39:56Z" duration="1.377236" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="DemoIntegrationTests" fullname="Guisha.Validation.DemoIntegrationTests" classname="Guisha.Validation.DemoIntegrationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-22 09:39:54Z" end-time="2026-10-22 09:39:55Z" duration="0.253450" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="GreyboxLoadsRestoresStateAndSwitchesDungeon" fullname="Guisha.Validation.DemoIntegrationTests.GreyboxLoadsRestoresStateAndSwitchesDungeon" methodname="GreyboxLoadsRestoresStateAndSwitchesDungeon" classname="Guisha.Validation.DemoIntegrationTests" runstate="Runnable" seed="437858963" result="Passed" start-time="2026-10-22 09:39:54Z" end-time="2026-10-22 09:39:55Z" duration="0.245983" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1003" name="ModuleIntegrationTests" fullname="Guisha.Validation.ModuleIntegrationTests" classname="Guisha.Validation.ModuleIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-22 09:39:55Z" end-time="2026-10-22 09:39:56Z" duration="0.978447" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1005" name="ModesAnimationAndSurvivalUseRealGameplay" fullname="Guisha.Validation.ModuleIntegrationTests.ModesAnimationAndSurvivalUseRealGameplay" methodname="ModesAnimationAndSurvivalUseRealGameplay" classname="Guisha.Validation.ModuleIntegrationTests" runstate="Runnable" seed="967786048" result="Passed" start-time="2026-10-22 09:39:55Z" end-time="2026-10-22 09:39:56Z" duration="0.974864" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="MonoSingletonKeepsPrimaryAndClearsOnDestroy" fullname="Guisha.Validation.ModuleIntegrationTests.MonoSingletonKeepsPrimaryAndClearsOnDestroy" methodname="MonoSingletonKeepsPrimaryAndClearsOnDestroy" classname="Guisha.Validation.ModuleIntegrationTests" runstate="Runnable" seed="1586863260" result="Passed" start-time="2026-10-22 09:39:56Z" end-time="2026-10-22 09:39:56Z" duration="0.002780" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1006" name="RenderingIntegrationTests" fullname="Guisha.Validation.RenderingIntegrationTests" classname="Guisha.Validation.RenderingIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-22 09:39:56Z" end-time="2026-10-22 09:39:56Z" duration="0.144454" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1008" name="ActivePipelineRendersTemplateAndSpawnedEntity" fullname="Guisha.Validation.RenderingIntegrationTests.ActivePipelineRendersTemplateAndSpawnedEntity" methodname="ActivePipelineRendersTemplateAndSpawnedEntity" classname="Guisha.Validation.RenderingIntegrationTests" runstate="Runnable" seed="990706657" result="Passed" start-time="2026-10-22 09:39:56Z" end-time="2026-10-22 09:39:56Z" duration="0.141142" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="300000" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="MaterialBindingReusesAndReleasesOwnedCopies" fullname="Guisha.Validation.RenderingIntegrationTests.MaterialBindingReusesAndReleasesOwnedCopies" methodname="MaterialBindingReusesAndReleasesOwnedCopies" classname="Guisha.Validation.RenderingIntegrationTests" runstate="Runnable" seed="541854038" result="Passed" start-time="2026-10-22 09:39:56Z" end-time="2026-10-22 09:39:56Z" duration="0.002539" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+              </properties>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
