@@ -1,5 +1,5 @@
 {
-  "CHANGELOG.md": "7c71f882b0d0cbd1a5e949a66db8c5df1c9c453db0ccb572937576eb4ada34dc",
+  "CHANGELOG.md": "5d87f0c4c0632c60b7e7418f3ec9dc7e9844af32a99658e5faf0f2104fee60dc",
   "CHANGELOG.md.meta": "6a7bfa81b3bfa3d0f67991f8eced71c870bd6c4f174240ee0428ee1d12dfd3d3",
   "Documentation~/index.md": "378f6707c655f58951c1473c428da576233d3de806e795735aa901a855c5f4d9",
   "Editor.meta": "fb4feda544e1bf82f51e39ba02d5e87f5247b51dbf6a1e2eab2d2b1d7a33c78b",
@@ -7,7 +7,7 @@
   "Editor/DemoSceneCreator.cs.meta": "05b0aca18a0d5d59842867fd9c8a4bcdefa9b9f9c05b42493309a3cef7ceb83a",
   "Editor/Guisha.Editor.asmdef": "a0c7840a87d37cf906784c067991e1499da38dc5fe62475e4ab3ca983cd5d074",
   "Editor/Guisha.Editor.asmdef.meta": "67d2075b145642e690071ba7d3edeb74ae37f43c8a89a617fd66e6023cb0169e",
-  "Editor/PatternAnimationSetup.cs": "78379d3dc5601df733c202fbc1e628a0de5842b8d24c3b57fb39b6fa3d71cef9",
+  "Editor/PatternAnimationSetup.cs": "0c8af3749b8f9d709009185dbce92167f71fd00619ea18cfed2e9accd1b8389c",
   "Editor/PatternAnimationSetup.cs.meta": "4a39d4557d337b777005e3e1765e8e74a4b14d3fc79b79daa1033e45211f7839",
   "Editor/RenderingSetup.cs": "97a75af70c6b0efcb706856d406e9e7f50f40772117b105a1467c400eec16fd0",
   "Editor/RenderingSetup.cs.meta": "280e00027a472e49e9e24ef2e7dab45386b82dec06ba31d9b1c60c7ccaf62705",
@@ -256,9 +256,11 @@
   "Runtime/Shaders/GuishaBuiltInUnlit.shader.meta": "a9dbb4f2111c02e369fde21617ad81eca2563c3e7f6a38f79db42daf7b39fdf4",
   "Tests.meta": "ae22f3ba6ba3f91cf19f33808e4642a557c537273939b38ad475de17edce874e",
   "Tests/Editor.meta": "042e59f5b55575e8159762bfc191fbcebba51b79cc971ef2182d7f3bceb810cb",
+  "Tests/Editor/AnimationAssetRegressionTests.cs": "2ca80f2f34df792c7acbea4dee81219a4aab7d847d1c85f44ec3a92b03f924c1",
+  "Tests/Editor/AnimationAssetRegressionTests.cs.meta": "489b3a24a1bcf515cb0b68f8b699d2e964249db8188661b352037d6f3c2ba032",
   "Tests/Editor/CoreRegressionTests.cs": "eb186a0ffd81771c384e20c5f0b95810a2e3eb234434b200712b2e0a2ec824c8",
   "Tests/Editor/CoreRegressionTests.cs.meta": "b0489d14c2bc7bbe40e622ee7f8fa1a2714329b3aa8140e00be934a6cc50e8b2",
-  "Tests/Editor/Guisha.Tests.asmdef": "b951ba55b922033bf87d762166e9617ccc965afecca6e8486710413032ce9cfc",
+  "Tests/Editor/Guisha.Tests.asmdef": "0e5057d2fdd5108408afb8e4a63e4fc361d6e2469bea4f48da4709e42ef2a64c",
   "Tests/Editor/Guisha.Tests.asmdef.meta": "dbeb59e9702ae683626ced31441e8db47af93c86d73fb2f0f5dd9275eda12083",
   "Tests/Editor/PatternRegressionTests.cs": "ec06c69aa59db94f0898bb929df6635861e987c21a88359c36b6111a4d4a4fa2",
   "Tests/Editor/PatternRegressionTests.cs.meta": "1c309c02302759c4cc36f6d1d108476dda2f3683867a84eaaea20ba37e8b00c7",
@@ -275,6 +277,6 @@
   "Tests/Runtime/RenderingIntegrationTests.cs.meta": "2016e960bfffdbc5a4a7238e844a6491d4e6395fd5725ced88a696c698265288",
   "Tests/Runtime/SingletonTestManager.cs": "941f9e31e95b8f556116a9af78f4fd5c45d6a952a01c9dcabd3cdf2dbb766bdc",
   "Tests/Runtime/SingletonTestManager.cs.meta": "b294a7892d233823ebce8ff6614f5dde919b86fbb456334a0446f41067ba970e",
-  "package.json": "4695312a1a93d853daaa3e7f4947a43cb38a3aa25f4fe9ae69566ad67fb78f38",
+  "package.json": "463b1ffb700c5c1ecea0bf38a605e28873ec345ff9fb4391c6bd2b2b79f95eef",
   "package.json.meta": "ba4266d66fa42bd18f317561f4a0969baacdb79cdd6d0a6e2b2c9e1b16663ff2"
 }

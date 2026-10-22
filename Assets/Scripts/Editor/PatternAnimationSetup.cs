@@ -168,6 +168,8 @@ namespace Guisha.Editor // 将本文件类型归入 Guisha.Editor，避免类型
 
             ) // 结束上方跨行的参数/条件列表。
                 controller.AddParameter(name, AnimatorControllerParameterType.Trigger); // 调用 controller.AddParameter，提交当前对象的配置更新。
+            EditorUtility.SetDirty(controller); // 标记根控制器参数已修改，避免导入动画子资产时丢失尚未持久化的参数。
+            AssetDatabase.SaveAssets(); // 在创建 AnimationClip 子资产之前先保存 Speed、布尔和触发参数。
             var machine = controller.layers[0].stateMachine; // 把 controller.layers[0].stateMachine 保存为 有限状态机。
             AnimatorState idle = State(controller, machine, "Idle", 0.01f, true), walk = State(controller, machine, "Walk", 0.05f, true), run = State(controller, machine, "Run", 0.09f, true); // 把 State 的返回值 保存为 空闲对象集合或待机状态；把 State 的返回值 保存为 walk；把 State 的返回值 保存为 run。
             var crouch = State(controller, machine, "Crouch", 0.01f, true); // 把 State 的返回值 保存为 crouch。
@@ -213,6 +215,9 @@ namespace Guisha.Editor // 将本文件类型归入 Guisha.Editor，避免类型
                 exit.duration = 0.1f; // 更新 exit.duration，使用 0.1f。
             } // 结束遍历循环。
 
+            EditorUtility.SetDirty(controller); // 保存创建后的根控制器和层设置。
+            EditorUtility.SetDirty(machine); // 保存状态机的默认状态与转换关系。
+            AssetDatabase.SaveAssets(); // 保证新项目关闭或重新导入后仍有完整动画配置。
             return controller; // 返回 控制器组件。
         } // 结束方法。
 

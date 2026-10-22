@@ -23,7 +23,7 @@ https://github.com/12121-doy/UnityTemplate.git?path=/UPM/com.guisha.framework
 ## 文档
 
 - [渲染管线适配](Docs/Guisha/渲染管线适配.md)：三种管线切换、API 调用、配置、材质范围与真实测试结果。
-- [逐行中文注释说明](Docs/Guisha/逐行注释说明.md)：101 个脚本已有中文说明，可在 IDE 悬停查看方法文档。
+- [逐行中文注释说明](Docs/Guisha/逐行注释说明.md)：102 个开发脚本已有中文说明，可在 IDE 悬停查看方法文档；UPM 分发副本由工具同步。
 - [方法与继承调用手册 PDF](Docs/Guisha/Unity框架_方法与继承调用手册.pdf)：147 页，完整收录 219 个类型、523 个显式方法/构造/局部函数声明，包含继承模板、参数与返回类型、源码位置、可点击调用关系及测试附录。
 - [接入与扩展](Docs/Guisha/接入与扩展.md)
 - [设计模式与动画](Docs/Guisha/设计模式与动画.md)

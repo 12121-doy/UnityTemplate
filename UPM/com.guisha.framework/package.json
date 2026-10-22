@@ -1,6 +1,6 @@
 {
   "name": "com.guisha.framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Guisha Unity Framework",
   "description": "Unity C# framework with Core utilities, 23 GoF patterns, gameplay, animation and optional Built-in/URP/HDRP adapters.",
   "unity": "2022.3",

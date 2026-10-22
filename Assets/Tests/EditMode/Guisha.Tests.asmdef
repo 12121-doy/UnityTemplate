@@ -3,7 +3,8 @@
   "references": [
     "Guisha.Core",
     "Guisha.Framework",
-    "Guisha.Rendering"
+    "Guisha.Rendering",
+    "Guisha.Editor"
   ],
   "includePlatforms": [
     "Editor"

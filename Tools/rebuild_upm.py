@@ -11,7 +11,7 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "UPM/com.guisha.framework"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 
 def collect():
@@ -56,7 +56,10 @@ def collect():
     files["package.json"] = (json.dumps(manifest, indent=2, ensure_ascii=False) + "\n").encode("utf8")
     files["README.md"] = (ROOT / "Docs/Guisha/UPM安装说明.md").read_text(encoding="utf8").replace("\r\n", "\n").encode("utf8")
     files["Documentation~/index.md"] = files["README.md"]
-    files["CHANGELOG.md"] = ("# Changelog\n\n## 1.0.0 - 2026-10-22\n\n"
+    files["CHANGELOG.md"] = ("# Changelog\n\n## 1.0.1 - 2026-10-22\n\n"
+        "- Fixed AnimatorController parameters lost when first generating sample assets.\n"
+        "- Added a forced-reimport regression test for generated animation parameters and states.\n\n"
+        "## 1.0.0 - 2026-10-22\n\n"
         "- Added an installable UPM entry point with declared Unity package dependencies.\n"
         "- Includes the current Chinese-commented framework and three rendering adapters.\n"
         "- Gameplay bootstrap is opt-in through a project-owned FrameworkSettings asset.\n").encode("utf8")
