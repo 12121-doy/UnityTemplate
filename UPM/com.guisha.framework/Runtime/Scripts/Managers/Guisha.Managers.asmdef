@@ -1,0 +1,12 @@
+{
+  "name": "Guisha.Managers",
+  "rootNamespace": "Guisha.Managers",
+  "references": [
+    "Guisha.Core",
+    "Guisha.Framework",
+    "Unity.Addressables",
+    "Unity.ResourceManager",
+    "Guisha.Rendering"
+  ],
+  "autoReferenced": true
+}

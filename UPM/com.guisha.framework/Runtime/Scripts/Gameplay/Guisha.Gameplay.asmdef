@@ -1,0 +1,10 @@
+{
+  "name": "Guisha.Gameplay",
+  "rootNamespace": "Guisha.Gameplay",
+  "references": [
+    "Guisha.Core",
+    "Guisha.Framework",
+    "Guisha.Rendering"
+  ],
+  "autoReferenced": true
+}

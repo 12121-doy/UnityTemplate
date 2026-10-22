@@ -6,6 +6,14 @@ Unity + C# 恐怖游戏框架，包含底层工具、实体/FSM/交互抽象、�
 
 ## 快速开始
 
+**在其他项目中安装：** Package Manager → **Add package from git URL**，使用完整地址：
+
+```text
+https://github.com/12121-doy/UnityTemplate.git?path=/UPM/com.guisha.framework
+```
+
+根仓库地址用于克隆完整工程。UPM 安装、启用游戏管理器和生成示例见 [UPM 安装说明](Docs/Guisha/UPM安装说明.md)。
+
 1. 使用 **Unity 2022.3.62f3c1** 打开工程，等待依赖导入（Addressables 1.22.3、uGUI、Test Framework 1.1.33）。
 2. 打开 `Assets/GuishaDemo/Scenes/Guisha.unity`，按 Play。
 3. WASD 移动，鼠标视角，Shift 跑，Ctrl 蹲，E 交互；Tab 背包，1 使用鬼器，Esc 暂停，M 选择玩法，F5/F9 存读档。

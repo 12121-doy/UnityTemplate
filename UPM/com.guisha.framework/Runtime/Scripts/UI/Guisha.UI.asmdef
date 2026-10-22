@@ -1,0 +1,10 @@
+{
+  "name": "Guisha.UI",
+  "rootNamespace": "Guisha.UI",
+  "references": [
+    "Guisha.Core",
+    "Guisha.Framework",
+    "Unity.ugui"
+  ],
+  "autoReferenced": true
+}

@@ -5,7 +5,7 @@ using UnityEngine; // 引入 UnityEngine 命名空间，使用其中的类型与
 namespace Guisha.Managers // 将本文件类型归入 Guisha.Managers，避免类型命名冲突。
 { // 开始命名空间。
     /// <summary>
-    /// 在首场景加载前显式创建框架管理器。
+    /// 项目提供 FrameworkSettings 配置时，在首场景加载前显式创建框架管理器。
     /// </summary>
     public static class GameBootstrap // 在首场景加载前显式创建框架管理器。
     { // 开始类型。
@@ -16,6 +16,8 @@ namespace Guisha.Managers // 将本文件类型归入 Guisha.Managers，避免�
         private static void Boot() // 读取 FrameworkSettings 日志开关，显式创建资源、音频、UI、场景、玩法和流程管理器。
         { // 开始方法。
             var settings = Resources.Load<FrameworkSettings>("Guisha/FrameworkSettings"); // 把 Resources.Load<FrameworkSettings> 的返回值 保存为 框架或动画配置。
+            if (settings == null) // 引入 UPM 包不等于启用整套游戏流程；由项目自己的配置资产显式启用。
+                return; // 未接入框架玩法的项目仍可独立使用 Core 和设计模式工具。
             if (settings != null) // 当框架或动画配置不为空时，执行下方分支。
             { // 开始条件分支。
                 Guisha.Core.Logger.Enabled = settings.enableLogs; // 更新 Guisha.Core.Logger.Enabled，使用 settings.enableLogs。

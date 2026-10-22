@@ -1,0 +1,9 @@
+{
+  "name": "Guisha.Rendering",
+  "rootNamespace": "Guisha.Rendering",
+  "references": [
+    "Guisha.Core",
+    "Guisha.Framework"
+  ],
+  "autoReferenced": true
+}

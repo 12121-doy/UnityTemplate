@@ -1,0 +1,25 @@
+{
+  "name": "com.guisha.framework",
+  "version": "1.0.0",
+  "displayName": "Guisha Unity Framework",
+  "description": "Unity C# framework with Core utilities, 23 GoF patterns, gameplay, animation and optional Built-in/URP/HDRP adapters.",
+  "unity": "2022.3",
+  "author": {
+    "name": "12121-doy"
+  },
+  "dependencies": {
+    "com.unity.addressables": "1.22.3",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.test-framework": "1.1.33",
+    "com.unity.modules.ai": "1.0.0",
+    "com.unity.modules.animation": "1.0.0",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.director": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.modules.particlesystem": "1.0.0",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.ui": "1.0.0"
+  },
+  "documentationUrl": "https://github.com/12121-doy/UnityTemplate/blob/main/Docs/Guisha/UPM安装说明.md"
+}

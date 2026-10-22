@@ -219,9 +219,11 @@ namespace Guisha.Editor // 把渲染相关类型放入 Guisha.Editor 命名空�
         /// <summary>构建检查顺序，负值使本检查提前执行。</summary>
         public int callbackOrder => -100; // 声明构建检查顺序，负值使本检查提前执行。
 
-        /// <summary>在 Player 构建流程开始时检查当前适配器与 Shader 引用。</summary>
+        /// <summary>已提供 FrameworkSettings 的项目在 Player 构建前检查适配器与 Shader 引用。</summary>
         public void OnPreprocessBuild(BuildReport report) // 在 Player 构建流程开始时检查当前适配器与 Shader 引用。
         { // 开始当前代码块。
+            if (Resources.Load<FrameworkSettings>("Guisha/FrameworkSettings") == null) // 包使用方没有启用游戏框架时，不创建配置或限制其渲染管线。
+                return; // 允许只使用底层工具的项目按自己的构建流程运行。
             RenderingSetup.RefreshShaderReferences(); // 刷新 Resources 中的显式 Shader 引用，供构建时保留使用。
             RenderPipelineService.RequireAdapter(); // 执行 RenderPipelineService.RequireAdapter()，完成当前渲染适配步骤。
         } // 结束当前代码块。

@@ -1,0 +1,8 @@
+{
+  "name": "Guisha.Framework",
+  "rootNamespace": "Guisha.Framework",
+  "references": [
+    "Guisha.Core"
+  ],
+  "autoReferenced": true
+}
