@@ -1,6 +1,6 @@
-# UnityTemplate · 诡舍框架
+# UnityTemplate · 框架
 
-Unity + C# 恐怖游戏框架，包含底层工具、实体/FSM/交互抽象、全局管理器、玩家与鬼怪 AI、叙事、UI、动画，以及 23 种 GoF 设计模式。
+Unity + C# 游戏框架，包含底层工具、实体/FSM/交互抽象、全局管理器、玩家与鬼怪 AI、叙事、UI、动画，以及 23 种 GoF 设计模式。
 
 支持 **内置、URP、HDRP**，通过 `Guisha > Rendering` 菜单选择。已在 Unity 2022.3.62f3c1、URP/HDRP 14.0.12 分别验证；业务代码共用，材质、相机、模板方向光和 HDRP 曝光由可选适配器处理。
 
